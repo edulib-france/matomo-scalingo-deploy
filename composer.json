@@ -3,7 +3,7 @@
     "paas": {
       "php-config": [
         "memory_limit=256M"
-      ],
+      ]
     }
   }
 }
