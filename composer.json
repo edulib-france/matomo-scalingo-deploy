@@ -1,25 +1,9 @@
 {
-  … // Your content
   "extra": {
-    // default values of PaaS specific instructions
     "paas": {
-      "document-root": "",
-      "index-document": "index.php",
-      "engines": {
-        "nginx": "default"
-      },
-      "framework": "",
       "php-config": [
         "memory_limit=256M"
       ],
-      "php-includes": [],
-      "php-fpm-config": [],
-      "php-fpm-includes": [],
-      "nginx-includes": [],
-      "log-files": [],
-      "compile": [],
-      "new-relic": false,
-      "access-log-format": ""
     }
   }
 }
