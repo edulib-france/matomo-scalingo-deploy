@@ -1,0 +1,8 @@
+{
+  "jobs": [
+    {
+      "command": "30 * * * * bin/archiving-reports.sh",
+      "size": "XL"
+    }
+  ]
+}
