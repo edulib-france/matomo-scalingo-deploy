@@ -30,6 +30,43 @@ trusted_hosts[] = <?php echo getenv('MATOMO_HOST') ?>
 multi_server_environment = <?php echo getenv('MATOMO_MULTI_SERVER_ENVIRONMENT') ?>
 <?php } ?>
 
+; maximum number of rows for any of the Referers tables (keywords, search engines, campaigns, etc.), and Custom variables names
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_REFERRERS')) { ?>
+datatable_archiving_maximum_rows_referrers = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_REFERRERS') ?>
+<?php } ?>
+; maximum number of rows for any of the Referers subtable (search engines by keyword, keyword by campaign, etc.), and Custom variables values
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_REFERRERS')) { ?>
+datatable_archiving_maximum_rows_subtable_referrers = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_REFERRERS') ?>
+<?php } ?>
+
+; maximum number of rows for any of the Actions tables (pages, downloads, outlinks)
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_ACTIONS')) { ?>
+datatable_archiving_maximum_rows_actions = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_ACTIONS') ?>
+<?php } ?>
+; maximum number of rows for pages in categories (sub pages, when clicking on the + for a page category)
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_ACTIONS')) { ?>
+datatable_archiving_maximum_rows_subtable_actions = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_ACTIONS') ?>
+<?php } ?>
+
+; maximum number of rows for any of the Events tables (Categories, Actions, Names)
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_EVENTS')) { ?>
+datatable_archiving_maximum_rows_events = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_EVENTS') ?>
+<?php } ?>
+; maximum number of rows for sub-tables of the Events tables (eg. for the subtables Categories>Actions or Categories>Names).
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_EVENTS')) { ?>
+datatable_archiving_maximum_rows_subtable_events = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_EVENTS') ?>
+<?php } ?>
+
+; maximum number of rows for the Site Search table
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SITE_SEARCH')) { ?>
+datatable_archiving_maximum_rows_site_search = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SITE_SEARCH') ?>
+<?php } ?>
+
+; maximum number of rows for the User ID report
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_USERID_USERS')) { ?>
+datatable_archiving_maximum_rows_userid_users = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_USERID_USERS') ?>
+<?php } ?>
+
 <?php if (getenv('MATOMO_MAINTENANCE') == 'true') { ?>
 [Tracker]
 record_statistics = 0 
