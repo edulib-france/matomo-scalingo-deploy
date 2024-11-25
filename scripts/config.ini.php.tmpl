@@ -67,6 +67,10 @@ datatable_archiving_maximum_rows_site_search = <?php echo getenv('MATOMO_DATATAB
 datatable_archiving_maximum_rows_userid_users = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_USERID_USERS') ?>
 <?php } ?>
 
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_STANDARD')) { ?>
+datatable_archiving_maximum_rows_standard = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_STANDARD') ?>
+<?php } ?>
+
 <?php if (getenv('MATOMO_MAINTENANCE') == 'true') { ?>
 [Tracker]
 record_statistics = 0 
