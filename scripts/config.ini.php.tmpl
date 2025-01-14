@@ -15,7 +15,7 @@ force_ssl = 1
 always_load_commands_from_plugin=DbCommands,AdminCommands,LicenseKeyCommands
 enable_trusted_host_check = 0
 <?php if (getenv('MATOMO_MAINTENANCE') == 'true') { ?>
-maintenance_mode = 1 
+maintenance_mode = 1
 <?php } ?>
 
 <?php if (getenv('MATOMO_SALT')) { ?>
@@ -71,8 +71,51 @@ datatable_archiving_maximum_rows_userid_users = <?php echo getenv('MATOMO_DATATA
 datatable_archiving_maximum_rows_standard = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_STANDARD') ?>
 <?php } ?>
 
-<?php if (getenv('MATOMO_MAINTENANCE') == 'true') { ?>
-[Tracker]
-record_statistics = 0 
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_CUSTOM_DIMENSIONS')) { ?>
+datatable_archiving_maximum_rows_custom_dimensions = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_CUSTOM_DIMENSIONS') ?>
 <?php } ?>
 
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_CUSTOM_DIMENSIONS')) { ?>
+datatable_archiving_maximum_rows_subtable_custom_dimensions = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_CUSTOM_DIMENSIONS') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_CUSTOM_VARIABLES')) { ?>
+datatable_archiving_maximum_rows_custom_variables = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_CUSTOM_VARIABLES') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_CUSTOM_VARIABLES')) { ?>
+datatable_archiving_maximum_rows_subtable_custom_variables = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_CUSTOM_VARIABLES') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_CUSTOM_REPORTS')) { ?>
+datatable_archiving_maximum_rows_custom_reports = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_CUSTOM_REPORTS') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_CUSTOM_REPORTS')) { ?>
+datatable_archiving_maximum_rows_subtable_custom_reports = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_CUSTOM_REPORTS') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_STANDARD')) { ?>
+datatable_archiving_maximum_rows_standard = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_STANDARD') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_MEDIA')) { ?>
+datatable_archiving_maximum_rows_media = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_MEDIA') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_MEDIA')) { ?>
+datatable_archiving_maximum_rows_subtable_media = <?php echo getenv('MATOMO_DATATABLE_ARCHIVING_MAXIMUM_ROWS_SUBTABLE_MEDIA') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_ARCHIVING_RANKING_QUERY_ROW_LIMIT_PRIMARY')) { ?>
+  archiving_ranking_query_row_limit_primary = <?php echo getenv('MATOMO_ARCHIVING_RANKING_QUERY_ROW_LIMIT_PRIMARY') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_ARCHIVING_RANKING_QUERY_ROW_LIMIT_SECONDARY')) { ?>
+  archiving_ranking_query_row_limit_secondary = <?php echo getenv('MATOMO_ARCHIVING_RANKING_QUERY_ROW_LIMIT_SECONDARY') ?>
+<?php } ?>
+
+<?php if (getenv('MATOMO_MAINTENANCE') == 'true') { ?>
+[Tracker]
+record_statistics = 0
+<?php } ?>
