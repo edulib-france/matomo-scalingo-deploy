@@ -5,7 +5,7 @@
       "size": "XL"
     },
     {
-      "command": "1 * * * * bin/process-queued-events.sh",
+      "command": "* * * * * bin/process-queued-events.sh",
       "size": "L"
     }
   ]
