@@ -3,5 +3,5 @@
 bin/init.sh
 
 echo "Archiving reports... "
-php console core:archive --url "https://$MATOMO_HOST"
+php console queuedtracking:process
 echo "done"

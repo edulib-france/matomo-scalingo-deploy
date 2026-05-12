@@ -3,6 +3,10 @@
     {
       "command": "30 * * * * bin/archiving-reports.sh",
       "size": "XL"
+    },
+    {
+      "command": "1 * * * * bin/queuedtracking-process.sh",
+      "size": "L"
     }
   ]
 }

@@ -3,10 +3,7 @@
 if [[ -z "$MATOMO_AUTO_ARCHIVING_FREQUENCY" ]]; then
   echo "Auto-archiving reports job disabled"
 else
-  bin/fetch-purchased-plugins.sh
-  bin/generate-config-ini.sh
-  bin/set-license-key.sh
-  bin/activate-plugins.sh
+  bin/init.sh
 
   echo "Start auto-archiving reports CRON job"
   while true; do
