@@ -8,7 +8,7 @@ password = "<?php echo @$db['pass']; ?>"
 dbname = "<?php echo trim(@$db['path'], '/'); ?>"
 port = <?php echo @$db['port'].PHP_EOL; ?>
 enable_ssl = 1
-ssl_no_verify = 1
+ssl_ca = "/app/assets/scalingo-db-ca.pem"
 
 [General]
 enable_load_data_infile = 0
