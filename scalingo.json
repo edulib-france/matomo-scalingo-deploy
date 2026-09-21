@@ -55,6 +55,10 @@
     "MATOMO_GENERAL_SALT": {
       "description": "Encryption salt used by Matomo",
       "generator": "secret"
+    },
+    "MATOMO_DELETE_LOGS_OLDER_THAN": {
+      "description": "Delete raw data older than this number of days (reports are kept). Unset: raw data is kept forever",
+      "required": false
     }
   },
   "addons": [

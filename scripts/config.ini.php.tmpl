@@ -118,6 +118,18 @@ archiving_ranking_query_row_limit_primary = <?php echo getenv('MATOMO_ARCHIVING_
 archiving_ranking_query_row_limit_secondary = <?php echo getenv('MATOMO_ARCHIVING_RANKING_QUERY_ROW_LIMIT_SECONDARY') ?>
 <?php } ?>
 
+<?php if (getenv('MATOMO_DELETE_LOGS_OLDER_THAN')) { ?>
+; Delete raw data (visits, actions) older than N days. Archived reports are
+; kept: only the detailed logs go. Irreversible, and the reports of these
+; periods can no longer be reprocessed. A value saved in the UI
+; (Administration > Privacy > Anonymize data) takes precedence over this one.
+[Deletelogs]
+delete_logs_enable = 1
+delete_logs_older_than = <?php echo (int) getenv('MATOMO_DELETE_LOGS_OLDER_THAN').PHP_EOL; ?>
+delete_logs_schedule_lowest_interval = 7
+delete_logs_max_rows_per_query = 100000
+<?php } ?>
+
 <?php if (getenv('MATOMO_MAINTENANCE') == 'true') { ?>
 [Tracker]
 record_statistics = 0
